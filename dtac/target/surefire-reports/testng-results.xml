@@ -2,44 +2,44 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-15T16:15:47 ICT" name="Mobile Automation Test Suite" finished-at="2025-07-15T16:16:31 ICT" duration-ms="43895">
+  <suite started-at="2025-07-15T16:19:43 ICT" name="Mobile Automation Test Suite" finished-at="2025-07-15T16:20:31 ICT" duration-ms="47725">
     <groups>
     </groups>
-    <test started-at="2025-07-15T16:15:47 ICT" name="Login Tests" finished-at="2025-07-15T16:16:31 ICT" duration-ms="43895">
+    <test started-at="2025-07-15T16:19:43 ICT" name="Login Tests" finished-at="2025-07-15T16:20:31 ICT" duration-ms="47725">
       <class name="tests.LoginTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:15:47 ICT" name="setUp" finished-at="2025-07-15T16:15:53 ICT" duration-ms="6490" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:19:43 ICT" name="setUp" finished-at="2025-07-15T16:19:49 ICT" duration-ms="5620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidPhoneNumber()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:15:53 ICT" name="testInvalidPhoneNumber" description="TC_LOGIN_002: Login With invalid phone number" finished-at="2025-07-15T16:16:02 ICT" duration-ms="8640" status="PASS">
+        <test-method signature="testInvalidPhoneNumber()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:19:49 ICT" name="testInvalidPhoneNumber" description="TC_LOGIN_002: Login With invalid phone number" finished-at="2025-07-15T16:20:01 ICT" duration-ms="11655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidPhoneNumber -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:16:02 ICT" name="tearDown" finished-at="2025-07-15T16:16:02 ICT" duration-ms="280" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:20:01 ICT" name="tearDown" finished-at="2025-07-15T16:20:01 ICT" duration-ms="468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:16:02 ICT" name="setUp" finished-at="2025-07-15T16:16:06 ICT" duration-ms="3525" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:20:01 ICT" name="setUp" finished-at="2025-07-15T16:20:05 ICT" duration-ms="3511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:16:06 ICT" name="testValidLogin" description="TC_LOGIN_001: Login With Correct phone number" finished-at="2025-07-15T16:16:11 ICT" duration-ms="5741" status="PASS">
+        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:20:05 ICT" name="testValidLogin" description="TC_LOGIN_001: Login With Correct phone number" finished-at="2025-07-15T16:20:13 ICT" duration-ms="8481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:16:11 ICT" name="tearDown" finished-at="2025-07-15T16:16:12 ICT" duration-ms="384" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:20:13 ICT" name="tearDown" finished-at="2025-07-15T16:20:14 ICT" duration-ms="457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:16:12 ICT" name="setUp" finished-at="2025-07-15T16:16:15 ICT" duration-ms="3512" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:20:14 ICT" name="setUp" finished-at="2025-07-15T16:20:17 ICT" duration-ms="3874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidate()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:16:15 ICT" name="testValidate" description="TC_LOGIN_VAL" finished-at="2025-07-15T16:16:30 ICT" duration-ms="14814" status="PASS">
+        <test-method signature="testValidate()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:20:17 ICT" name="testValidate" description="TC_LOGIN_VAL" finished-at="2025-07-15T16:20:31 ICT" duration-ms="13183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:16:30 ICT" name="tearDown" finished-at="2025-07-15T16:16:31 ICT" duration-ms="480" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTests@67f639d3]" started-at="2025-07-15T16:20:31 ICT" name="tearDown" finished-at="2025-07-15T16:20:31 ICT" duration-ms="450" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -1,0 +1,53 @@
+# 📱 Test-Mobile-Java
+
+โครงการนี้ใช้ **Java + Appium + TestNG** สำหรับทดสอบแอปมือถือ Android (รองรับ APK)
+
+## 🧰 Tools & Technologies
+
+- Java
+- Appium Java Client
+- TestNG
+- Selenium
+- Maven
+- Android Emulator / Real Device
+
+---
+
+## 🚀 ขั้นตอนการติดตั้งและรัน
+
+### 1. ติดตั้งเครื่องมือที่จำเป็น
+
+- [Java JDK 11+](https://adoptium.net/)
+- [Apache Maven](https://maven.apache.org/)
+- [Node.js & npm](https://nodejs.org/) *(สำหรับ Appium)*
+- [Appium Server](https://appium.io/)
+- Android Studio + Emulator หรือใช้ Real Device ที่เปิด Developer mode
+
+### 2. ติดตั้ง Appium
+
+```bash
+npm install -g appium
+
+### 3. ติดตั้ง Dependencies
+```mvn clean install```
+
+### 4. ตั้งค่าไฟล์ .apk
+src/test/resources/apps/
+
+### 5. เปิด Appium Server
+appium --port 4723
+
+### 6. รันเทสด้วย TestNG
+mvn test
+
+
+### โครงสร้าง project 
+Test-Moblile-java/
+├── src/
+│   ├── main/
+│   │   └── java/pages/            # Page Object
+│   └── test/
+│       ├── java/base/             # Base Test
+│       └── java/tests/            # Test Cases
+│       └── resources/apps/        # APK files
+├── pom.xml                        # Maven Config
