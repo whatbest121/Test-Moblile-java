@@ -1,0 +1,47 @@
+Test Case ID,Test Suite / Module,Test Case Description,Precondition,Test Steps,Test Data,Expected Result,Actual Result,Status (Pass/Fail),Severity,Remarks,Bug ID,Bug Description
+TC_LOGIN_001,login myais app ,Login With Correct phone number,open app myais,"1. Click login
+2. Fill in your phone number
+3. Submit Login",Phone number: 0970177078,login suscess and go to Confirm OPT,,,Medium,,,
+TC_LOGIN_002,login myais app ,Log in with an unregistered phone number,open app myais,"1. Click login
+2. Fill in your phone number
+3. Submit Login",Phone number: 0981234567,"Error message: ""Account not found""",,,Medium,,,
+TC_LOGIN_VAL_001,validate login myais app ,Login With invalid phone character,open app myais,"1. Click login
+2. Enter your phone character
+3. Submit Login","Phone number: ""aaaaaaa""","Error message: ""Invalid number/email. Please try again.""",,,Medium,,,
+TC_LOGIN_VAL_002,validate login myais app ,Log in with a phone number less than 10 digits,open app myais,"1. Click login
+2. Enter a phone number of less than 10 digits.
+3. Submit Login",Phone number: 098123456,"Error message: ""Invalid number/email. Please try again.""",,,Medium,,,
+TC_LOGIN_VAL_003,validate login myais app ,Log in with a phone number greater than 10 digits,open app myais,"1. Click login
+2. Enter a phone number with more than 10 digits.
+3. Submit Login",Phone number: 09812345677,"Error message: ""Invalid number/email. Please try again.""",,,Medium,,,
+TC_REGISTER_001,register myais app ,Register With Correct phone number,open app myais,"1. Click Register
+2. Fill in your phone number
+3. Submit Register
+4. go to Confirm OTP
+5. Enter the correct OTP
+6. Submit",Phone number: 0970177078,login suscess,,,Medium,,,
+TC_REGISTER_002,register myais app ,Register with a previously registered phone number,open app myais,"1. Click login
+2. Fill in your phone number
+3. Submit Register",Phone number: 0970177078,"message: ""Number 097-0177078 already has a myAIS account.""",,,Medium,,,
+TC_REGISTER_VAL_001,validate register myais app ,Registered with an invalid phone number,open app myais,"1. Click Register
+2. Enter your invalid phone number.
+3. Submit Register",Phone number: 1234567890,"Error message: ""Invalid number Please try again.""",,,Medium,,,
+TC_REGISTER_VAL_002,validate register myais app ,Registered With invalid phone character,open app myais,"1. Click Register
+2. Enter your phone character","Phone number: ""aaaaaaa""",Unable to enter character input.,,,Medium,,,
+TC_REGISTER_VAL_003,validate register myais app ,Registered in with a phone number less than 10 digits,open app myais,"1. Click login
+2. Enter a phone number of less than 10 digits.
+3. Submit Register",Phone number: 098123456,"Error message: ""Invalid number Please try again.""",,,Medium,,,
+TC_REGISTER_VAL_004,validate register myais app ,Registered in with a phone number greater than 10 digits,open app myais,"1. Click login
+2. Enter a phone number with more than 10 digits.",Phone number: 09812345677,Cannot enter number inputs exceeding 10 digits.,,,Medium,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,

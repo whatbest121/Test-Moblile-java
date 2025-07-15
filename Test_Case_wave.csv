@@ -1,0 +1,38 @@
+Test Case ID,Test Suite / Module,Test Case Description,Precondition,Test Steps,Test Data,Expected Result,Actual Result,Status (Pass/Fail),Severity,Remarks,Bug ID,Bug Description
+TC_LOGIN_000,login wave app ,Change country of phone number,open app wave,"1. Click login
+2. Click select country","select country: Thailand
+",66,Unable to click to change country,FALL,Medium,,,
+TC_LOGIN_001,login wave app ,Login With Correct phone number,open app wave,"1. Click login
+2. Click select country
+3. Fill in your phone number
+4. Submit Login","select country: Myanmar
+
+Phone number: 0970177078",login suscess and go to Confirm OPT,,TRUE,Medium,,,
+TC_LOGIN_VAL_001,validate login wave app ,Login With invalid phone Empty Fields,open app wave,"1. Click login
+2. Submit login",,"Error messager: ""Invalid mobile number.Please check again.""",,TRUE,Medium,,,
+TC_LOGIN_VAL_002,validate login wave app ,Login in with a phone number less than 8 digits,open app wave,"1. Click login
+2. Click select country
+2. Enter a phone number of less than 8 digits.
+","select country: Myanmar
+Phone number: 0981234","Error messager: ""Please enter valid mobile number.""",,TRUE,Medium,,,
+TC_LOGIN_VAL_003,validate login wave app ,Login in with a phone number greater than 10 digits,open app wave,"1. Click login
+2. Enter a phone number with more than 10 digits.","select country: Myanmar
+Phone number: 09812345677","Error messager: ""Please enter valid mobile number.""",go to OTP,TRUE,Medium,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
