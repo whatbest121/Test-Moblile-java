@@ -1,53 +1,91 @@
 # 📱 Test-Mobile-Java
 
-โครงการนี้ใช้ **Java + Appium + TestNG** สำหรับทดสอบแอปมือถือ Android (รองรับ APK)
-
-## 🧰 Tools & Technologies
-
-- Java
-- Appium Java Client
-- TestNG
-- Selenium
-- Maven
-- Android Emulator / Real Device
+โครงการนี้เป็นระบบ **Automated Testing สำหรับ Mobile App (Android)** โดยใช้ **Java + Appium + TestNG** รองรับการทดสอบไฟล์ .apk หลายแอป (AIS, Dtac, Wave) พร้อม Test Case ในรูปแบบ CSV
 
 ---
 
-## 🚀 ขั้นตอนการติดตั้งและรัน
+## 🧰 Tools & Technologies
+
+- ![Java](https://img.shields.io/badge/Java-11%2B-blue) Java 11+
+- ![Maven](https://img.shields.io/badge/Maven-3.6%2B-brightgreen) Maven
+- ![Appium](https://img.shields.io/badge/Appium-2.x-purple) Appium Java Client
+- ![TestNG](https://img.shields.io/badge/TestNG-7.8.0-orange) TestNG
+- ![Selenium](https://img.shields.io/badge/Selenium-4.11.0-green) Selenium
+- Android Emulator หรือ Real Device
+
+---
+
+## 🗂️ โครงสร้างโปรเจกต์
+
+```
+Test-Moblile-java/
+├── dtac/ หรือ wave/           # Module สำหรับแต่ละแอป
+│   ├── pom.xml               # Maven Config
+│   └── src/
+│       ├── main/java/pages/  # Page Object (LoginPage, RegisterPage)
+│       └── test/
+│           ├── java/base/    # BaseTest
+│           ├── java/tests/   # Test Cases (LoginTests, RegisterTests)
+│           └── resources/
+│               ├── apps/     # ไฟล์ .apk สำหรับทดสอบ
+│               └── testng.xml# TestNG Suite Config
+├── Test_Case_*.csv           # Test Case (AIS, Dtac, Wave)
+└── .gitignore                # ไม่ track *.apk
+```
+
+---
+
+## 📝 Test Case (CSV)
+- `Test_Case_myAIS.csv`, `Test_Case_Dtac.csv`, `Test_Case_wave.csv` :
+  - เก็บรายละเอียด Test Case (Login/Register/Validation) สำหรับแต่ละแอป
+  - ฟิลด์หลัก: Test Case ID, Description, Steps, Test Data, Expected Result ฯลฯ
+
+---
+
+## ⚙️ วิธีติดตั้งและรันเทส
 
 ### 1. ติดตั้งเครื่องมือที่จำเป็น
-
 - [Java JDK 11+](https://adoptium.net/)
 - [Apache Maven](https://maven.apache.org/)
 - [Node.js & npm](https://nodejs.org/) *(สำหรับ Appium)*
 - [Appium Server](https://appium.io/)
-- Android Studio + Emulator หรือใช้ Real Device ที่เปิด Developer mode
+- Android Studio + Emulator หรือ Real Device (เปิด Developer mode)
 
-### 2. ติดตั้ง Appium
-
+### 2. ติดตั้ง Appium (Global)
 ```bash
 npm install -g appium
+```
 
-### 3. ติดตั้ง Dependencies
-```mvn clean install```
+### 3. ติดตั้ง Dependencies (ในแต่ละโมดูล dtac/ หรือ wave/)
+```bash
+cd dtac   # หรือ wave
+mvn clean install
+```
 
-### 4. ตั้งค่าไฟล์ .apk
-src/test/resources/apps/
+### 4. วางไฟล์ .apk สำหรับทดสอบ
+- ใส่ไฟล์ .apk ที่ต้องการทดสอบใน `src/test/resources/apps/` ของแต่ละโมดูล
+- ตัวอย่างไฟล์:
+  - AIS: `com.ais.mimo.eservice_11.1.4-943_minAPI29.apk`
+  - Dtac: `th.co.crie.tron2.android_10.29.1-10290100.apk`
+  - Wave: `mm.com.wavemoney.wavepay_2.4.1-1465.apk`
 
 ### 5. เปิด Appium Server
+```bash
 appium --port 4723
+```
 
 ### 6. รันเทสด้วย TestNG
+```bash
 mvn test
+```
+- สามารถปรับแต่ง test suite ได้ที่ `src/test/resources/testng.xml`
 
+---
 
-### โครงสร้าง project 
-Test-Moblile-java/
-├── src/
-│   ├── main/
-│   │   └── java/pages/            # Page Object
-│   └── test/
-│       ├── java/base/             # Base Test
-│       └── java/tests/            # Test Cases
-│       └── resources/apps/        # APK files
-├── pom.xml                        # Maven Config
+## ⚠️ ข้อจำกัดและปัญหาการทดสอบ
+
+- **dtac**: ไม่มีเบอร์ dtac จริง จึงทดสอบได้เฉพาะฟังก์ชัน login เบื้องต้นเท่านั้น (login/register ต้องใช้เบอร์ dtac จริงเสมอ)
+- **wave**: แอปมี bug ไม่สามารถเลือกเบอร์ประเทศไทย (+66) ได้ ทำให้ไม่ได้รับ OTP สำหรับ login/register จึงทดสอบได้จำกัด
+- **myAIS**: ไม่สามารถรันแอปบน emulator/simulator ได้ เพราะแอปบล็อกโหมด developer (dev mode) จึงทดสอบจริงไม่ได้ แต่มีการเขียน test case อ้างอิงจาก manual test บน iPhone ส่วนตัว
+
+---
