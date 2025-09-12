@@ -89,3 +89,5 @@ mvn test
 - **myAIS**: ไม่สามารถรันแอปบน emulator/simulator ได้ เพราะแอปบล็อกโหมด developer (dev mode) จึงทดสอบจริงไม่ได้ แต่มีการเขียน test case อ้างอิงจาก manual test บน iPhone ส่วนตัว
 
 ---
+
+.efr
